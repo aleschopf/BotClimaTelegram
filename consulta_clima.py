@@ -2,18 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 
-def converter_tempo(legenda:str)->str:
-    if legenda == "Mostly sunny":
-        legenda_convertida = "Parcialmente nublado"
-    elif legenda == "Sunny":
-        legenda_convertida = "Ensolarado"
-    elif legenda == "Scattered showers":
-        legenda_convertida = "Chuvoso"
-    else:
-        legenda_convertida = "Pancadas de chuvas"
-    return legenda_convertida
-
-
 def consultar_clima(local:str)->str:
     options = webdriver.ChromeOptions()
     options.add_argument("--headless=new")
